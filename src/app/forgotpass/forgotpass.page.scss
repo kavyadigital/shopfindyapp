@@ -1,0 +1,13 @@
+.logo { text-align: center;margin:50px 0px 25px 0px;}
+.logo img{width: 50%;border-radius: 50%;}
+ion-input{border: 1px solid #AFAFAF; margin-bottom: 15px; border-radius:5px; color: #000;}
+ion-input{
+    --placeholder-color: black;
+    --placeholder-opacity: 1;
+    --placeholder-text-indent: 0;
+    --place-holder-padding-left:3px;
+    --padding-start: 10px!important;
+	--placeholder-text-transform: capitalize;
+}
+button{background: #5fb3cb; color: #fff; font-size: 18px;   height: 3.4rem;}
+ion-select{border: 1px solid #AFAFAF; margin-bottom: 15px; border-radius:5px; color: #000;}

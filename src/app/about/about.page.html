@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-transform: uppercase;">About Us</ion-title>
+    <ion-buttons slot="end">
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-card *ngFor="let ab of listofdata">
+    <ion-card-content>
+      <ion-icon name="person-circle-outline" class="about-icon"></ion-icon>
+      <ion-icon name="business-outline" class="about-icon"></ion-icon>
+      <ion-icon name="globe-outline" class="about-icon"></ion-icon>
+      <h2>{{ab.title}}</h2>
+      <p>
+      {{ab.ds}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

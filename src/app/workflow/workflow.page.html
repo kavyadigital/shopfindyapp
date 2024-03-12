@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-transform: uppercase"></ion-title>
+    <ion-buttons slot="end"> </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h1 style="color: brown">How Application Works?</h1>
+  <div class="instruction-steps">
+    <h2>Follow these steps to use our application:</h2>
+    <ion-list *ngFor="let w of work_flow;let i = index">
+      <hr style="background: rgb(174, 172, 172)" />
+      <p style="color: rgb(17, 0, 255); font-size: 20px">Qus {{i+1}} :- {{w.title}}?</p>
+      <p style="color: red; font-size: 20px;margin: 15px;text-align:justify;">Ans :- {{w.ds}}.</p>
+      <!-- <hr style="background: black" /> -->
+    </ion-list>
+  </div>
+</ion-content>

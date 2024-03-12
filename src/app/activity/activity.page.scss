@@ -1,0 +1,33 @@
+ion-content {
+    --ion-font-family: 'Montserrat', sans-serif; /* Apply custom font to the entire page */
+    font-size: 16px; /* Set a base font size */
+  }
+  
+  ion-segment-button {
+    font-weight: 500;
+    // background-color: #eb445a;
+    /* Apply medium font weight to segment buttons */
+  }
+  
+  ion-card {
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box-shadow for cards */
+  }
+  
+  ion-card-title {
+    font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font to card titles */
+    font-size: 20px; /* Increase font size for card titles */
+    font-weight: 700; /* Apply bold font weight to card titles */
+  }
+  
+  ion-card-content {
+    font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font to card content */
+    font-size: 16px; /* Set font size for card content */
+  }
+  
+  .custom-active-segment {
+    --color:  #eb445a; /* Change this to your preferred color */
+    --color-checked:  #eb445a; /* Change this to your preferred color */
+  }

@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-transform: uppercase;">{{title}}</ion-title>
+    <ion-buttons slot="end">
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-img [src]="url+image"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{ s_name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ s_desc }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

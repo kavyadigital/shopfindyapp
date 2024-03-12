@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row style="background: #eb445a;box-shadow: 2px 7px 11px;border: solid 1px #FFFF;">
+    <ion-col size="12" class="logo">
+      <img width="200" src="../assets/ShopFindy logo.png">
+    </ion-col>
+    <ion-col size="12" style="margin-top: -10px;text-align: center;">
+       <b style="font-size: 25px;color: #f8f4f4;">Contact Us</b>
+    </ion-col>
+  </ion-row>
+  <ion-card class="contact-card">
+    <ion-card-content>
+      <h2>Contact Information</h2>
+      <p>
+        Feel free to get in touch with us via email or phone for any inquiries or assistance.
+      </p>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+          Email: {{this.email}}
+        </ion-item>
+        <ion-item>
+          <ion-icon name="call-outline" slot="start"></ion-icon>
+          Phone: {{this.mono}}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

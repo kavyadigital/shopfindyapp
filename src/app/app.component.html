@@ -1,0 +1,287 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header style="text-align: center">
+            <ion-row>
+              <ion-col size="12" class="logo">
+                <img src="../assets/ShopFindy logo.png" />
+              </ion-col>
+            </ion-row>
+          </ion-list-header>
+        </ion-list>
+
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="home"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="home-outline" slot="start"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="about"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="information" slot="start"></ion-icon>
+            <ion-label>About</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle autoHide="false" *ngIf="user_login_status">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="profile"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="person" slot="start"></ion-icon>
+            <ion-label>Manage Account</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle autoHide="false" *ngIf="user_login_status">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="walletpage"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="wallet-outline" slot="start"></ion-icon>
+            <ion-label>Wallet</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <!-- <ion-menu-toggle autoHide="false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="hotdeal"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="list-outline" slot="start"></ion-icon>
+            <ion-label>Hot Deal</ion-label>
+          </ion-item>
+        </ion-menu-toggle> -->
+
+        <ion-menu-toggle autoHide="false" *ngIf="user_login_status">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="activity"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="list-outline" slot="start"></ion-icon>
+            <ion-label>Activity </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="categories"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="clipboard-outline" slot="start"></ion-icon>
+            <ion-label>Store List</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <!-- <ion-menu-toggle autoHide="false" (click)="products()">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+          >
+            <ion-icon name="list-outline" slot="start"></ion-icon>
+            <ion-label>Products</ion-label>
+          </ion-item>
+        </ion-menu-toggle> -->
+
+        <!-- <ion-menu-toggle autoHide="false" routerLink="/addproduct">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+          >
+            <ion-icon name="add-outline" slot="start"></ion-icon>
+            <ion-label>Add Products</ion-label>
+          </ion-item>
+        </ion-menu-toggle> -->
+
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="tutorial"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="list-outline" slot="start"></ion-icon>
+            <ion-label>Tutorial</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="newsrelease"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="list-outline" slot="start"></ion-icon>
+            <ion-label>News/press release</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="contact"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="call-outline" slot="start"></ion-icon>
+            <ion-label>Contact us</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="refreral"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="wallet-outline" slot="start"></ion-icon>
+            <ion-label>Referral</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="workflow"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="list-outline" slot="start"></ion-icon>
+            <ion-label>Work Flow</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="social"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="share-outline" slot="start"></ion-icon>
+            <ion-label>Social media</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false" *ngIf="user_login_status == false">
+          <ion-item
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+            routerLink="login"
+            routerLinkActive="active"
+            routerDirection="root"
+            detail="false"
+          >
+            <ion-icon name="log-in-outline" slot="start"></ion-icon>
+            <ion-label>Login</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            (click)="presentAlert()"
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+          >
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <ion-label>Logout</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <!-- <ion-menu-toggle autoHide="false">
+          <ion-item
+            routerLink="deactivateac"
+            detail="false"
+            style="font-size: 20px; color: #ed576b"
+            button
+            detail-none
+            lines="none"
+          >
+            <ion-icon name="trash-outline" slot="start"></ion-icon>
+            <ion-label>Delete Ac</ion-label>
+          </ion-item>
+        </ion-menu-toggle> -->
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

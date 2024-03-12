@@ -1,0 +1,23 @@
+.greeting-card {
+  background-color: #e1dfd8; /* Set a gold background color */
+  color: #ffffff; /* Set white text color */
+  border-radius: 15px; /* Add rounded corners */
+  margin-bottom: 15px; /* Add spacing between cards */
+}
+
+.card-header {
+  background-color: #ff6347; /* Set a coral background color for the header */
+}
+
+.email-title {
+  color: #ffffff; /* Set white text color for the email title */
+}
+
+.card-content {
+  padding: 10px; /* Add padding to the card content */
+}
+
+.referral-code,
+.amount {
+  color: #0f0a0a; /* Set a green text color for the referral code and amount */
+}

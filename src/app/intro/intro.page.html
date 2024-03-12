@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true">
+  <swiper-container>
+    <swiper-slide style="border: solid 5px #6e6b6a;">
+      <img width="200" src="../assets/ShopFindy logo.png" alt="">
+      <h1 style="color: #eb445a;">Welcome to ShopFindy</h1>
+      <p>Welcome Account</p>
+      <p style="color: #6e6c6b;">
+        Congratulations! $20.00 will be
+        deposited in your ShopFindy
+        Account for signing up and you
+        can immediately start shopping
+        and getting Cash Back.
+        finish setting
+      </p>
+    
+<br><br><br>
+  <ion-button color="primary" fill="outline" routerLink="/accountcomplete" *ngIf="user_type.value == 'u'">  
+       <ion-icon name="person-outline" ></ion-icon> Complete Account
+      </ion-button>
+    
+      <ion-button color="primary" fill="outline" routerLink="/accountcomplete-b" *ngIf="user_type.value == 'b'">  
+        <ion-icon name="person-outline" ></ion-icon> Complete Account
+       </ion-button>
+</swiper-slide>
+
+  </swiper-container>
+
+ 
+</ion-content>

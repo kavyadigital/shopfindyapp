@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>My Wallet</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="shareApp()">
+        <ion-icon slot="icon-only" name="share" style="font-size: 30px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="ion-padding wallet-page">
+  <ion-card class="wallet-card">
+    <ion-card-header>
+      <ion-icon name="wallet-outline" class="wallet-icon"></ion-icon>
+      <ion-card-title>Current Balance</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h2 class="balance-amount">{{ balance | currency: 'USD' }}</h2>
+      <!-- <p>Last transaction: {{ lastTransaction }}</p> -->
+    </ion-card-content>
+  </ion-card>
+
+  <div class="action-buttons">
+    <!-- <ion-button expand="block" color="success" (click)="addMoney()" routerLink="/addmoney">
+      <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+      My rewards
+    </ion-button> -->
+
+    <!-- <ion-button expand="block" color="danger" (click)="withdrawAmount()" routerLink="/widhdraw">
+      <ion-icon slot="start" name="remove-circle-outline"></ion-icon>
+      Withdraw Amount
+    </ion-button> -->
+
+    <ion-button expand="block" color="dark" (click)="withdrawAmount()" routerLink="/transhistory">
+      <ion-icon slot="start" name="list-outline"></ion-icon>
+      Transactions
+    </ion-button>
+
+    <ion-button expand="block" color="success" (click)="shareApp()">
+      <ion-icon slot="start" name="share-outline"></ion-icon>
+      Share App
+    </ion-button>
+    <ion-button expand="block" color="success" routerLink="/savemycards">
+      <ion-icon slot="start" name="share-outline"></ion-icon>
+      Card-Linked Offline Purchase
+    </ion-button>
+    <ion-button expand="block" color="danger" routerLink="/qrscanner">
+      <ion-icon slot="start" name="camera-outline"></ion-icon>
+      QR Scanner
+    </ion-button>
+    <ion-button expand="block" color="danger" routerLink="/qr-code">
+      <ion-icon slot="start" name="qr-code-outline"></ion-icon>
+      MY QR
+    </ion-button>
+
+  </div>
+</ion-content>
+
+

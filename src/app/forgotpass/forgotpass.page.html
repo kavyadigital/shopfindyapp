@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-transform: uppercase;"></ion-title>
+    <ion-buttons slot="end">
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row style="
+      background: #bdd1f1;
+      box-shadow: 2px 7px 11px;
+      border: solid 1px black;
+    ">
+    <ion-col size="12" class="logo">
+      <img src="../assets/ShopFindy logo.png" />
+    </ion-col>
+    <ion-col size="12" style="margin-top: -10px; text-align: center">
+      <b style="font-size: 25px; color: #040405">Forget Password</b>
+    </ion-col>
+    <br /><br />
+  </ion-row>
+
+  <ion-row padding>
+    <ion-col size="12">
+      <ion-list>
+        <br>
+        <ion-item style="width: 100%;" lines="none">
+          <ion-select style="padding: 0px 7px;" multiple="false" cancelText="Cancel" okText="Okay" placeholder="User Type" [(ngModel)]="type">
+            <ion-select-option value="u">User</ion-select-option>
+            <ion-select-option value="b">Business</ion-select-option>
+           </ion-select>
+        </ion-item>
+      <br>
+        <ion-item lines="none">
+          <ion-input type="text" [(ngModel)]="email" name="mobile" placeholder="Enter Your Email id">
+          </ion-input>
+        </ion-item>
+      
+      </ion-list>
+    </ion-col>
+
+    <ion-col size="12" class="ion-padding">
+      <button ion-button expand="block" (click)="forget(email,type)" style="
+          background: #01a0f0;
+          border-radius: 10px;
+          width: 100%;
+          margin: 0 auto;
+          color: #fff;
+        ">
+        Get Password
+      </button>
+    </ion-col>
+  </ion-row>
+ 
+</ion-content>

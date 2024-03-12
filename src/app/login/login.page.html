@@ -1,0 +1,60 @@
+<ion-content [fullscreen]="true">
+  <br><br> <br> <br>
+  <div style="text-align: center;">
+    <img width="200" src="../assets/ShopFindy logo.png" alt="">
+  </div>
+  <br><br>
+  <ion-row padding>
+    <ion-col size="12">
+      <ion-list>
+
+        <ion-item style="width: 100%;" lines="none">
+          <ion-select multiple="false" cancelText="Cancel" okText="Okay" placeholder="User Type" [(ngModel)]="type">
+            <ion-select-option value="u">User</ion-select-option>
+            <ion-select-option value="b">Business</ion-select-option>
+           </ion-select>
+        </ion-item>
+<br>
+            <ion-item style="width: 100%;" lines="none">
+                 <ion-input type="email" name="email" placeholder="Enter Your Email Id" [(ngModel)]="email"  (ionChange)='onKeypress(email)'>
+       </ion-input>
+    </ion-item>
+        <ion-item lines="none">
+          <ion-input type="password" [(ngModel)]="pass" name="password" placeholder="Enter Your Password">
+          </ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+
+    <ion-col size="12" class="ion-padding">
+      <ion-button ion-button expand="full" expand="block" color="primary" (click)="login(email,pass,type)">
+        Log In
+      </ion-button>
+    </ion-col>
+    <ion-col size="12" class="ion-padding" class="ion-text-center">
+
+      <span style="color: #3880ff; cursor: pointer;" routerLink="/signup">User Sign Up</span>
+<br>
+
+      <!-- <ion-button style="padding: 0px 12px;" ion-button fill="outline"  expand="full" expand="block" color="primary" routerLink="/signup">
+    Sign Up
+  </ion-button> -->
+<br>
+  <!-- <ion-button style="padding: 0px 12px;" ion-button fill="outline"  expand="full" expand="block" color="primary" routerLink="/bssignup">
+   Business Sign Up
+  </ion-button> -->
+  <!-- <div>
+    <a routerLink="/forgotpass" style="text-decoration: none; margin-left: 47%; color: #3880ff">
+      Forgot Password?
+      </a>
+      <br>
+  </div> -->
+  <span style="color: #3880ff; cursor: pointer;"routerLink="/bssignup">Business Sign Up</span>
+<br><br>
+  <span style="color: #3880ff; cursor: pointer;"routerLink="/forgotpass">Forgot Password?</span>
+
+    </ion-col>
+    <br /><br />
+   
+  </ion-row>
+</ion-content>

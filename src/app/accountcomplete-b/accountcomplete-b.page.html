@@ -1,0 +1,126 @@
+<ion-content [fullscreen]="true">
+  <br /><br />
+  <div style="text-align: center">
+    <img width="200" src="../assets/ShopFindy logo.png" alt="" />
+  </div>
+  <ion-row>
+    <ion-col size="12">
+      <br />
+      <br />
+
+      <ion-item style="width: 100%; opacity: 1" lines="none">
+        <ion-input
+          type="text"
+          name="r_code"
+          placeholder="Enter Referral Code (optional)"
+          [(ngModel)]="r_code"
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%; opacity: 1" lines="none" disabled="true">
+        <ion-input
+          type="text"
+          name="name"
+          placeholder="Name of Business"
+          [(ngModel)]="name"
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item
+        style="margin-top: 7px; opacity: 1"
+        lines="none"
+        disabled="true"
+      >
+        <ion-input
+          type="number"
+          name="mobile"
+          placeholder="Mobile Number"
+          [(ngModel)]="mono"
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%; opacity: 1" lines="none" disabled="true">
+        <ion-input
+          type="text"
+          name="lname"
+          placeholder="Landline number"
+          [(ngModel)]="b_land"
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%; opacity: 1" lines="none" disabled="true">
+        <ion-input
+          type="email"
+          name="email"
+          placeholder="Email Id"
+          [(ngModel)]="email"
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%" lines="none">
+        <ion-input
+          type="email"
+          name="email"
+          placeholder="Business Owner name"
+          [(ngModel)]="user_b"
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%" lines="none">
+        <ion-input
+          type="email"
+          name="email"
+          placeholder="Address"
+          [(ngModel)]="address"
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%" lines="none">
+        <ion-input
+          type="email"
+          name="email"
+          placeholder="City"
+          [(ngModel)]="city"
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%" lines="none">
+        <ion-select
+          multiple="false"
+          cancelText="Cancel"
+          okText="Okay"
+          placeholder="State"
+          [(ngModel)]="state"
+        >
+          <ion-select-option
+            value="{{state.name}}"
+            *ngFor="let state of list_of_state"
+            >{{ state.name }}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12" class="ion-padding">
+      <button
+        color="primary"
+        ion-button
+        expand="block"
+        (click)="completeaccount(user_b,address,city,state,r_code)"
+        style="border-radius: 10px; width: 100%; margin: 0 auto; color: #fff"
+      >
+        Complete Account
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-content>

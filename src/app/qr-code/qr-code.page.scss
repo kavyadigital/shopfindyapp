@@ -1,0 +1,14 @@
+/* src/app/your-component/your-component.component.scss */
+.qr-code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%; /* Adjust as needed */
+  }
+  
+  .qr-code-container svg {
+    width: 500px; /* Adjust as needed */
+    height: 500px; /* Adjust as needed */
+    background-color: #ffffff; /* Set the background color if needed */
+    border: 1px solid #000000; /* Set the border color if needed */
+  }

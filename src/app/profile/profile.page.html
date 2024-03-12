@@ -1,0 +1,169 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+
+      <p style="font-weight: 900;color: black;text-align:center;padding: 10px;height: 50px;background-color: rgb(243, 206, 206);font-size: 20px;color: blueviolet">***Update Account Detail ***</p>
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////       -->
+     <div *ngIf="this.user_type.value == 'u'">
+      <ion-item style="width: 100%;" lines="none" disabled="true">
+        <ion-input type="text"name="asname"  [(ngModel)]="user_id_t" placeholder="Enter your user_id">
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%;" lines="none">
+        <ion-input type="text"name="asname"  [(ngModel)]="name" placeholder="Enter your name">
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%;" lines="none">
+        <ion-input type="text"name="nasame"  [(ngModel)]="lname" placeholder="Enter your last name">
+        </ion-input>
+      </ion-item>
+
+		  <ion-item style="width: 100%;" lines="none">
+        <ion-input type="text"name="namesas" [(ngModel)]="email" placeholder="Enter your email">
+        </ion-input>
+      </ion-item>
+          <ion-item style="width: 100%;" lines="none">
+            <ion-input type="number"name="mobile" [(ngModel)]="mono" placeholder="Enter your mobile number" >
+            </ion-input>
+          </ion-item>
+    
+          <ion-item style="width: 100%;" lines="none">
+            <ion-input type="text"name="mobidfle" [(ngModel)]="address" placeholder="Enter your address" >
+            </ion-input>
+          </ion-item>
+
+          <ion-item style="width: 100%;" lines="none">
+            <ion-input type="text"name="mofdbile" [(ngModel)]="city" placeholder="Enter your city" >
+            </ion-input>
+          </ion-item>
+
+          <ion-item style="width: 100%;" lines="none">
+            <ion-input type="text"name="mofdsabile" [(ngModel)]="state" placeholder="Enter your state" >
+            </ion-input>
+          </ion-item>
+      <div style="padding: 10px;text-align: end;">
+        <ion-button color="danger" outline (click)="updatedetails(user_id_t,name,lname,email,mono,address,city,state)">Update</ion-button>
+      </div>
+    </div>
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////       -->
+<div *ngIf="this.user_type.value == 'b'">
+  <ion-item style="width: 100%;" lines="none" disabled="true">
+    <ion-input type="text"name="asname"  [(ngModel)]="user_id_t" placeholder="Enter your user_id">
+    </ion-input>
+  </ion-item>
+
+  <ion-item style="width: 100%;" lines="none">
+    <ion-input type="text"name="asname"  [(ngModel)]="business_name" placeholder="Enter your Business name">
+    </ion-input>
+  </ion-item>
+
+  <ion-item style="width: 100%;" lines="none">
+    <ion-input type="text"name="nasame"  [(ngModel)]="b_user" placeholder="Enter your Business Owner name">
+    </ion-input>
+  </ion-item>
+
+  <ion-item style="width: 100%;" lines="none">
+    <ion-input type="text"name="namesas" [(ngModel)]="b_email" placeholder="Enter your email">
+    </ion-input>
+  </ion-item>
+      <ion-item style="width: 100%;" lines="none">
+        <ion-input type="number"name="mobile" [(ngModel)]="b_mono" placeholder="Enter your mobile number" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%;" lines="none">
+        <ion-input type="number"name="mobile" [(ngModel)]="b_land" placeholder="Enter your Landline number" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%;" lines="none">
+        <ion-input type="text"name="mobidfle" [(ngModel)]="b_address" placeholder="Enter your address" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%;" lines="none">
+        <ion-input type="text"name="mofdbile" [(ngModel)]="b_city" placeholder="Enter your city" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="width: 100%;" lines="none">
+        <ion-input type="text"name="mofdsabile" [(ngModel)]="b_satate" placeholder="Enter your state" >
+        </ion-input>
+      </ion-item>
+  <div style="padding: 10px;text-align: end;">
+    <ion-button color="danger" outline (click)="updatedetails_b(user_id_t,business_name,b_user,b_email,b_mono,b_land,b_address,b_city,b_satate)">Update</ion-button>
+  </div>
+</div>
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////       -->
+      <p style="font-weight: 900;color: black;text-align: center;padding: 10px;height: 50px;background-color: rgb(208, 206, 206);font-size: 20px;color: blueviolet;">***Change Current Password***</p>
+        
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////       -->      
+<div *ngIf="this.user_type.value == 'u'">
+  <ion-item style="width: 100%;" lines="none">
+        <ion-input type="pasword"name="npass" placeholder="New Password"  [(ngModel)]="np">
+        </ion-input>
+      </ion-item>
+      <ion-item style="width: 100%;" lines="none">
+        <ion-input type="pasword"name="cnpass" placeholder="Confirm New Password"  [(ngModel)]="cnp">
+        </ion-input>
+      </ion-item>
+   <div style="padding: 10px;text-align: end;">
+    <ion-button color="danger" outline (click)="updatepassword(np,cnp)">Set New</ion-button>
+  </div>
+</div>
+<!-- //////////////////////////////////////////// -->
+
+<div *ngIf="this.user_type.value == 'b'">
+      <ion-item style="width: 100%;" lines="none">
+            <ion-input type="pasword"name="npass" placeholder="New Password"  [(ngModel)]="np">
+            </ion-input>
+          </ion-item>
+          <ion-item style="width: 100%;" lines="none">
+            <ion-input type="pasword"name="cnpass" placeholder="Confirm New Password"  [(ngModel)]="cnp">
+            </ion-input>
+          </ion-item>
+       <div style="padding: 10px;text-align: end;">
+        <ion-button color="danger" outline (click)="updatepassword_b(np,cnp)">Set New</ion-button>
+      </div>
+    </div>
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////       -->      
+      <p style="font-weight: 900;color: black;text-align:center;padding: 10px;height: 50px;background-color: rgb(201, 198, 198);font-size: 20px;color: blueviolet">***Delete My Account ***</p>
+      
+      <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////       -->
+      <div *ngIf="this.user_type.value == 'u'">
+      <ion-item style="width: 100%;opacity: 1;" lines="none" disabled="true">
+        <ion-input type="text"name="fdfs" placeholder="Enter Your email"  [(ngModel)]="email">
+        </ion-input>
+      </ion-item>
+      <ion-item style="width: 100%;" lines="none">
+        <ion-input type="text"name="cnpass" placeholder="Type Reason(optional)"  [(ngModel)]="remark">
+        </ion-input>
+      </ion-item>
+      <div style="padding: 10px;text-align: end;">
+          <ion-button color="danger" outline (click)="deletemyaccount(email,remark)">Submit</ion-button>
+        </div>
+      </div>
+         <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////       -->
+         <div *ngIf="this.user_type.value == 'b'">
+          <ion-item style="width: 100%;opacity: 1;" lines="none" disabled="true">
+            <ion-input type="text"name="fdfs" placeholder="Enter Your email"  [(ngModel)]="b_email">
+            </ion-input>
+          </ion-item>
+          <ion-item style="width: 100%;" lines="none">
+            <ion-input type="text"name="cnpass" placeholder="Type Reason(optional)"  [(ngModel)]="remark">
+            </ion-input>
+          </ion-item>
+          <div style="padding: 10px;text-align: end;">
+              <ion-button color="danger" outline (click)="deletemyaccount_b(b_email,remark)">Submit</ion-button>
+            </div>
+          </div>
+  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////       -->
+</ion-content>
+

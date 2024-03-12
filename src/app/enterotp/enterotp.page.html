@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+  <br><br> <br> <br>
+  <div style="text-align: center;">
+    <img width="200" src="../assets/ShopFindy logo.png" alt="">
+  </div>
+  <br><br>
+  <ion-row padding>
+    <ion-col size="12">
+      <ion-list>
+            <ion-item style="width: 100%;" lines="none">
+                 <ion-input type="email" name="email" placeholder="Enter OTP" [(ngModel)]="otp">
+       </ion-input>
+    </ion-item>
+
+     
+      </ion-list>
+    </ion-col>
+    <ion-col size="12" class="ion-padding">
+      <!-- (click)="login(otp)" -->
+      <ion-button ion-button expand="full" expand="block" color="primary" (click)="login(otp)">
+        Submit OTP
+      </ion-button>
+    </ion-col>
+
+  </ion-row>
+</ion-content>

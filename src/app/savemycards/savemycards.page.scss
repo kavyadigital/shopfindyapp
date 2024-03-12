@@ -1,0 +1,48 @@
+.debit-card {
+  background-color: #f77c7c;
+  color: #fff;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.card-header {
+  background-color: #2c3e50;
+}
+
+.card-title {
+  color: #fff;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.chip {
+  text-align: center;
+  color: #fff;
+}
+
+.card-number {
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+.expiry-holder {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expiry-date,
+.card-holder {
+  flex: 1;
+  text-align: center;
+}
+
+ion-list {
+  margin-top: 15px;
+}
+
+ion-item {
+  --highlight-height: 0;
+}

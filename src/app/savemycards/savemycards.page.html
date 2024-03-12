@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-transform: uppercase">My Cards</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addcard()">
+        <ion-icon
+          slot="icon-only"
+          name="add-circle-outline"
+          style="font-size: 30px"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let card of savedCards" class="debit-card">
+    <ion-card-header class="card-header">
+      <ion-card-title class="card-title">Card Details</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="card-content">
+      <ion-row>
+        <ion-col class="chip">
+          <ion-icon name="ellipse" size="small"></ion-icon>
+        </ion-col>
+        <ion-col class="card-number"> {{ card.card_no }} </ion-col>
+      </ion-row>
+      <ion-row class="expiry-holder">
+        <ion-col class="expiry-date"> {{ card.exp_date }} </ion-col>
+        <ion-col class="card-holder"> {{ card.card_holder }} </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>News & Press Releases</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-card *ngFor="let article of newsArticles">
+    <ion-card-header>
+
+      <!-- <ion-img [src]="article.image"></ion-img> -->
+      <ion-card-title>{{ article.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      {{ article.ds }}
+
+      <div class="article-icons">
+        <!-- <ion-icon name="share-outline" (click)="shareArticle(article)"></ion-icon>
+        <ion-icon name="bookmark-outline" (click)="bookmarkArticle(article)"></ion-icon> -->
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

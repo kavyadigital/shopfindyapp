@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-transform: uppercase;">Withdraw Money</ion-title>
+    <ion-buttons slot="end">
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Withdraw Funds from Your Account
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list lines="full">
+        <ion-item>
+          <ion-label position="stacked">Amount</ion-label>
+          <ion-input type="number" placeholder="Enter amount" [(ngModel)]="amount"></ion-input>
+        </ion-item>
+        <!-- You can add more fields for withdrawal details if needed -->
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" color="dark" (click)="withdrawFunds()">Withdraw Funds</ion-button>
+</ion-content>

@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button style="font-size: 40px;" color="light"></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-title>Home</ion-title> -->
+    <!-- <ion-buttons slot="end" routerLink="/walletpage">
+      <ion-icon name="wallet-outline" style="font-size: 40px;"></ion-icon>
+    </ion-buttons> -->
+    <!-- &nbsp;&nbsp;&nbsp;
+    <ion-buttons slot="end" (click)="notification()">
+      <ion-icon name="notifications-outline" style="font-size: 30px;"></ion-icon>
+    </ion-buttons> -->
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <swiper-container autoplay="50000">
+    <swiper-slide><img src="../../assets/2.jpg" alt=""></swiper-slide>
+    <swiper-slide><img src="../../assets/wordpress-sliders-seo.jpg" alt=""></swiper-slide>
+    <swiper-slide><img src="../../assets/1.jpg" alt=""></swiper-slide>
+    <swiper-slide><img src="../../assets/download.png" alt=""></swiper-slide>
+    <swiper-slide><img src="../../assets/images.jfif" alt=""></swiper-slide>
+</swiper-container>
+<h1 style="text-align: center;background-color: black;color: #FFF;padding: 20px;">
+  Hot Deal
+</h1>
+
+<ion-card *ngFor="let design of latestDesigns">
+  <ion-img width="50" [src]="imageUrl+design.image"></ion-img>
+  <ion-card-header>
+    <ion-card-title>{{ design.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{ design.description }}
+  </ion-card-content>
+</ion-card>
+<h1 style="text-align: center;background-color: black;color: #FFF;padding: 20px">
+  5$ Deal List
+</h1>
+
+<ion-card *ngFor="let design of latestDesigns5">
+  <ion-img [src]="imageUrl+design.image"></ion-img>
+  <ion-card-header>
+    <ion-card-title>{{ design.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{ design.description }}
+  </ion-card-content>
+</ion-card>
+
+<h1 style="text-align: center;background-color: black;color: #FFF;padding: 20px">
+  10$ Deal List
+</h1>
+
+<ion-card *ngFor="let design of latestDesigns10">
+  <ion-img [src]="imageUrl+design.image"></ion-img>
+  <ion-card-header>
+    <ion-card-title>{{ design.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{ design.description }}
+  </ion-card-content>
+</ion-card>
+
+<h1 style="text-align: center;background-color: black;color: #FFF;padding: 20px">
+  20$ Deal List
+</h1>
+
+<ion-card *ngFor="let design of latestDesigns20">
+  <ion-img [src]="imageUrl+design.image"></ion-img>
+  <ion-card-header>
+    <ion-card-title>{{ design.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{ design.description }}
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>

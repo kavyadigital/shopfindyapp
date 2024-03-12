@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-transform: uppercase;">Add Card</ion-title>
+    <ion-buttons slot="end">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        Card Information
+      </div>
+      <br>
+      <div class="card-body">
+  
+          <div class="mb-3">
+            <ion-label position="stacked">Card Number</ion-label>
+            <ion-input type="number" placeholder="1234 5678 9012 3456"  [(ngModel)]="card_no"></ion-input>
+          </div>
+          <div class="mb-3">
+            <ion-label position="stacked">Expiry Date</ion-label>
+            <!-- <ion-input type="date" placeholder="MM/YY" format="MM/YY" [(ngModel)]="exe_date"></ion-input> -->
+
+            <ion-row>
+              <ion-col size="6">
+                <ion-input type="number" placeholder="MM" min="1" max="12" [(ngModel)]="exe_month"></ion-input>
+              </ion-col>
+              <ion-col size="6">
+                <ion-input type="number" placeholder="YY" min="21" max="99" [(ngModel)]="exe_year"></ion-input>
+              </ion-col>
+            </ion-row>
+            
+
+
+          </div>
+          <div class="mb-3">
+            <ion-label position="stacked">CVV</ion-label>
+            <ion-input type="number" placeholder="123" [(ngModel)]="cvv"></ion-input>
+          </div>
+          <div class="mb-3">
+            <ion-label position="stacked">Card Holder Name</ion-label>
+            <ion-input type="text" placeholder="John Doe" [(ngModel)]="card_holder"></ion-input>
+          </div>
+          <ion-button expand="full" color="primary" (click)="save_card(card_no,exe_month,exe_year,cvv,card_holder)">Save Card</ion-button>
+        
+      </div>
+    </div>
+  </div>
+</ion-content>

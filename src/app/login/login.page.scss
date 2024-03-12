@@ -1,0 +1,123 @@
+.logo { text-align: center;margin:50px 0px 25px 0px;}
+.logo img{width: 60%;border-radius: 50%;}
+ion-input{border: 1px solid #AFAFAF; margin-bottom: 15px; border-radius:5px; color: #000;}
+ion-input{
+    --placeholder-color: black;
+    --placeholder-opacity: 1;
+    --placeholder-text-indent: 0;
+    --place-holder-padding-left:3px;
+    --padding-start: 10px!important;
+	--placeholder-text-transform: capitalize;
+}
+
+ion-select{border-radius:5px;
+     color: #000;
+     border: solid 1px #AFAFAF;
+     padding: 0 15px;
+    }
+
+// .select-wrapper {
+//    padding: 20px;
+// }
+// input::-moz-placeholder {
+//   color: black;
+// }
+// .item{background: none;}
+// .list .item-block .item-inner{border-bottom: 0px;}
+// .list .item-input:last-child{border-bottom: 0px;}
+// input:-ms-input-placeholder {
+//   color: black;
+// }
+// .native-input .sc-ion-input-md {
+//     color: black;
+// }
+
+
+// .text-input::-webkit-input-placeholder {
+//   text-indent: 0;
+//   color: black;
+// }
+
+// .item.item .checkbox {
+//     position: static;
+//     display: block;
+//     margin: 9px 10px 9px 4px;
+// }
+// ion-grid .item.item-block .item-inner {
+//     padding-right: 0px;
+//     border-bottom: 0px solid #dedede;
+// }
+// ion-grid .label {
+//     margin: 0px 0px 0px 0; color: #ffffff;
+// }
+// ion-grid{color: #ffffff;}
+// .list {
+//     margin: -1px 0 0px;
+// }
+// .checkbox-icon {
+//     border-color: #ffffff!important; border: 1px solid;
+//     background-color: #e85fb2!important;
+// }
+// .select-md 
+// {
+//     padding: 13px 28px 13px 40px;
+//     color: #fff;
+// }
+// .select-text
+// {
+//     color: #000;
+// }
+// .select-md .select-icon .select-icon-inner {
+//     left: -20px;
+//     top: 50%;
+//     margin-top: -3px;
+//     position: absolute;
+//     width: 0;
+//     height: 0;
+//     border-top: 5px solid;
+//     border-right: 5px solid transparent;
+//     border-left: 5px solid transparent;
+//     color: #171717;
+//     pointer-events: none;
+// }
+// ion-grid .item {
+//     padding-left: 5px;}
+
+//   .ico_1{    width: 40px;
+//     position: absolute;
+//     right: 7%;
+//     margin-top: 4px;}
+
+//     item.item-input.item-input-has-focus .item-inner,
+// .item-md.item-input.input-has-focus .item-inner {
+//   border-bottom-color: inherit;
+//   -webkit-box-shadow: none;
+//   box-shadow: none;
+// }
+// .list-md .item-input.item-input-has-focus:last-child,
+// .list-md .item-input.input-has-focus:last-child {
+//   border-bottom-color: inherit;
+//   -webkit-box-shadow: none;
+//   box-shadow: none;
+// }
+
+// .select-md .select-icon {
+//     position: relative;
+//     width: 12px;
+//     height: 19px;
+//     right: 72px!important;
+// }
+// .select-text {
+//     overflow: hidden;
+//     -webkit-box-flex: 1;
+//     -webkit-flex: 1;
+//     -ms-flex: 1;
+//     flex: 1;
+//     min-width: 106px!important;
+//     font-size: inherit;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     position: relative!important;
+//     right: 27px!important;
+// }
+

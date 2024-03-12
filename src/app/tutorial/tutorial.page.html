@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-transform: uppercase;">Tutorial</ion-title>
+    <ion-buttons slot="end">
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="tutorial-container">
+    <h3 style="color: blueviolet;">{{Title}}</h3>
+
+    <p>
+      {{ds}}
+    </p>
+
+  
+
+    <!-- Placeholder content with icons -->
+    <ion-list *ngFor="let s of tuorial; let i = index"> 
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+      <ion-label>Step {{i+1}}: {{s.steps}}</ion-label>
+      <br>
+      <br>
+    </ion-list>
+
+
+    <!-- You can add more steps/icons/content here -->
+
+  </div>
+</ion-content>

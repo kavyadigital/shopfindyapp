@@ -1,0 +1,25 @@
+.product-card {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    ion-img {
+      border-radius: 8px 8px 0 0;
+      max-height: 200px;
+    }
+    ion-card-content {
+      font-size: 14px;
+    }
+  }
+  
+  .product-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .product-price {
+    color: #007bff;
+  }
+  
+  .product-description {
+    color: #333;
+  }
+  

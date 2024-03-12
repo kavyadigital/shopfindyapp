@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-transform: uppercase;">Referral</ion-title>
+    <ion-buttons slot="end">
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let store of referrals" class="greeting-card">
+    <ion-card-header class="card-header">
+      <ion-card-title class="email-title">{{ store.email }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content class="card-content">
+      <ion-label class="referral-code">Referral Code: {{ store.r_code }}</ion-label>
+      <br>
+      <ion-label class="amount">Amount: {{ store.amount }}</ion-label>
+    </ion-card-content>
+  </ion-card>
+  
+  
+  
+  
+      <!-- <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Your Referral Code
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Your unique referral code: <strong>REFERRAL123</strong></p>
+        <ion-button expand="block">Share</ion-button>
+      </ion-card-content>
+    </ion-card> -->
+  
+    <!-- <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+         
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Total Referrals: <strong>10</strong></p>
+        <p>Rewards Earned: <strong>$50</strong></p>
+      </ion-card-content>
+    </ion-card> -->
+  
+  
+</ion-content>

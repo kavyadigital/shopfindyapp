@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Social Media</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let post of socialMediaPosts">
+    <ion-card-header>
+      <ion-card-title>{{ post.title }}</ion-card-title>
+      <!-- <ion-card-subtitle>{{ post.ds }}</ion-card-subtitle> -->
+    </ion-card-header>
+    <ion-card-content>
+      {{ post.ds }}
+      
+      <div class="social-icons">
+
+        <ion-icon name="logo-facebook" style="font-size: 30px;" (click)="shareApp(post)"></ion-icon>
+        <ion-icon name="logo-twitter" style="font-size: 30px;" (click)="shareApp(post)"></ion-icon>
+        <ion-icon name="logo-instagram" style="font-size: 30px;" (click)="shareApp(post)"></ion-icon>
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
